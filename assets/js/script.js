@@ -18,11 +18,11 @@ async function getAllPokemons() {
                 let typePokemon = tipo.type.name;
                 typesPokemons.push(typePokemon);
             }
+
+            //adicionar if para length > 1
+            //procurar como escrever entre itens da array como string
             return typesPokemons.toString();
         }
-
-        // console.log(dataPagina);
-        // console.log(dataPokemon);
 
         document.querySelector("#main").insertAdjacentHTML(
             "beforeend",
@@ -36,8 +36,8 @@ async function getAllPokemons() {
         />
          
          <div id="descrição">
-          <h2 class="title-pokemon"> ${dataPokemon.name} </h1>
-          <h2 class="title-pokemon"> ID:</h2>
+          <h2 class="title-pokemon">${dataPokemon.name}</h1>
+          <h2 class="title-pokemon"> Número:</h2>
           <p class="subtitle-pokemon">${dataPokemon.id}</p> 
           <h2 class="title-pokemon">Tipo:</h2>
           <p class="subtitle-pokemon">${getTypes()}</p>
