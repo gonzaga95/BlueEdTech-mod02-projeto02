@@ -6,3 +6,33 @@
     box-sizing: border-box;
     font-size: "Inter", Arial, sans-serif;
 }
+
+body,
+html {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+
+div#pokemon-each {
+    display: flex;
+    background-color: #3c3e44;
+    height: 230px;
+    width: 560px;
+    border-radius: 0.5rem;
+    margin: 4px 0;
+}

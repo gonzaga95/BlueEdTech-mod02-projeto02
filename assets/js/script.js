@@ -1,7 +1,9 @@
 let page = 0;
 
 async function getAllPokemons() {
-    const respAllPokemons = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${page}&limit=20`);
+    const respAllPokemons = await fetch(
+        `https://pokeapi.co/api/v2/pokemon?offset=${page}&limit=20`
+    );
     const dataAllPokemons = await respAllPokemons.json();
 
     dataAllPokemons.results.forEach(async function (item) {
@@ -59,7 +61,7 @@ async function getAllPokemons() {
 
 getAllPokemons();
 
-function btnNextPage () {
-    page++;
+function btnNextPage() {
+    page += 20;
     getAllPokemons();
 }
