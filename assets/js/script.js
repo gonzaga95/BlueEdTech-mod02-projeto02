@@ -1,5 +1,7 @@
+let page = 0;
+
 async function getAllPokemons() {
-    const respAllPokemons = await fetch(`https://pokeapi.co/api/v2/pokemon/`);
+    const respAllPokemons = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${page}&limit=20`);
     const dataAllPokemons = await respAllPokemons.json();
 
     dataAllPokemons.results.forEach(async function (item) {
@@ -19,9 +21,14 @@ async function getAllPokemons() {
                 typesPokemons.push(typePokemon);
             }
 
-            //adicionar if para length > 1
-            //procurar como escrever entre itens da array como string
-            return typesPokemons.toString();
+            let stringTypesPokemons;
+            if (typesPokemons.length === 1) {
+                stringTypesPokemons = typesPokemons.toString();
+                return stringTypesPokemons;
+            } else {
+                stringTypesPokemons = typesPokemons.join(" and ");
+                return stringTypesPokemons;
+            }
         }
 
         document.querySelector("#main").insertAdjacentHTML(
@@ -51,3 +58,8 @@ async function getAllPokemons() {
 }
 
 getAllPokemons();
+
+function btnNextPage () {
+    page++;
+    getAllPokemons();
+}
