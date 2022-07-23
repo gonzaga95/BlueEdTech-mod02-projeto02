@@ -17,18 +17,18 @@ async function getAllPokemons() {
 
         function getTypes() {
             const accessTypes = dataPagina.types;
-            const typesPokemons = [];
+            const arrayTypesPokemons = [];
             for (tipo of accessTypes) {
                 let typePokemon = tipo.type.name;
-                typesPokemons.push(typePokemon);
+                arrayTypesPokemons.push(typePokemon);
             }
 
             let stringTypesPokemons;
-            if (typesPokemons.length === 1) {
-                stringTypesPokemons = typesPokemons.toString();
+            if (arrayTypesPokemons.length === 1) {
+                stringTypesPokemons = arrayTypesPokemons.toString();
                 return stringTypesPokemons;
             } else {
-                stringTypesPokemons = typesPokemons.join(" and ");
+                stringTypesPokemons = arrayTypesPokemons.join(" and ");
                 return stringTypesPokemons;
             }
         }
@@ -53,6 +53,7 @@ async function getAllPokemons() {
           <h2 class="title-pokemon>Descrição</h2>
           <p class="subtitle-pokemon">${descricaoPokemon}</p>
 
+          </div>
         </div>
         `
         );
