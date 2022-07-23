@@ -44,7 +44,7 @@ async function getAllPokemons() {
           alt="imagem-${dataPokemon.name}"
         />
          
-         <div id="descrição">
+         <div id="pokemon-dates">
           <h2 class="title-pokemon">${dataPokemon.name}</h1>
           <h2 class="title-pokemon"> Número:</h2>
           <p class="subtitle-pokemon">${dataPokemon.id}</p> 

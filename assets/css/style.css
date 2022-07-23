@@ -36,3 +36,7 @@ div#pokemon-each {
     border-radius: 0.5rem;
     margin: 4px 0;
 }
+
+div#pokemon-dates {
+    color: #fff;
+}
