@@ -28,7 +28,7 @@ async function getAllPokemons() {
                 stringTypesPokemons = arrayTypesPokemons.toString();
                 return stringTypesPokemons;
             } else {
-                stringTypesPokemons = arrayTypesPokemons.join(" and ");
+                stringTypesPokemons = arrayTypesPokemons.join(" & ");
                 return stringTypesPokemons;
             }
         }
@@ -45,12 +45,12 @@ async function getAllPokemons() {
         />
          
          <div id="pokemon-dates">
-          <h2 class="title-pokemon">${dataPokemon.name}</h1>
-          <h2 class="title-pokemon"> Número:</h2>
+          <h2 class="name-pokemon">${dataPokemon.name}</h2>
+          <h2 class="title-pokemon">Número:</h2>
           <p class="subtitle-pokemon">${dataPokemon.id}</p> 
           <h2 class="title-pokemon">Tipo:</h2>
-          <p class="subtitle-pokemon">${getTypes()}</p>
-          <h2 class="title-pokemon>Descrição</h2>
+          <p class="subtitle-pokemon type-pokemon">${getTypes()}</p>
+          <h2 class="title-pokemon">Descrição:</h2>
           <p class="subtitle-pokemon">${descricaoPokemon}</p>
 
           </div>
