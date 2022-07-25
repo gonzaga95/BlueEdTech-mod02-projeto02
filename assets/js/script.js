@@ -62,11 +62,9 @@ async function getAllPokemons() {
 
 getAllPokemons();
 
-function btnNextPage() {
-    const btnNext = document.querySelector("#btnNextPage");
+const btnNext = document.querySelector("#btnNextPage");
 
-    btnNext.addEventListener("click", function () {
-        page += 20;
-        getAllPokemons();
-    });
-}
+btnNext.addEventListener("click", function () {
+    page += 20;
+    getAllPokemons();
+});
