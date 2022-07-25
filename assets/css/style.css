@@ -11,17 +11,23 @@ body,
 html {
     width: 100%;
     height: 100vh;
+    background-color: black;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 4rem;
+    height: 3.5rem;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 header img {
-    max-height: 3.8rem;
+    max-height: 3.3rem;
 }
 
 main {
@@ -30,13 +36,12 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 
 div#pokemon-each {
     display: flex;
-    background-color: #3c3e44;
-    /* background-image: url("./assets/images/pokedex.png"); */
+    background-color: #6d6e70;
     height: 230px;
     width: 560px;
     border-radius: 0.5rem;
@@ -76,7 +81,7 @@ div#pokemon-dates {
 
 button {
     height: 40px;
-    width: 100px;
+    width: 110px;
     color: #fff;
     background-color: #3c3e44;
     border-radius: 0.5rem;
@@ -94,13 +99,65 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #fff;
+    padding-top: 2rem;
 }
 
 footer a {
     text-decoration: none;
     text-transform: none;
+    color: #fff;
 }
 
 footer a:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-evenly;
+        height: 2.1rem;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header img {
+        max-height: 2rem;
+    }
+
+    #pokeball-img {
+        display: none;
+    }
+
+    main {
+        padding: 1rem 0;
+    }
+
+    div#pokemon-each {
+        height: fit-content;;
+        width: 90vh;
+        padding: .5rem;
+        gap: .5rem;
+    }
+
+    div#pokemon-each img {
+        max-height: 20vh;
+        align-self: center;
+    }
+
+    .name-pokemon {
+        font-size: 1rem;
+    }
+
+    .title-pokemon {
+        display: none;
+    }
+
+    .subtitle-pokemon {
+        text-align: justify;
+        font-size: .8rem;
+    }
 }

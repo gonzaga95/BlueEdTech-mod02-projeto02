@@ -47,7 +47,7 @@ async function getAllPokemons() {
          <div id="pokemon-dates">
           <h2 class="name-pokemon">${dataPokemon.name}</h2>
           <h2 class="title-pokemon">Número:</h2>
-          <p class="subtitle-pokemon">${dataPokemon.id}</p> 
+          <p class="subtitle-pokemon number-pokemon">${dataPokemon.id}</p> 
           <h2 class="title-pokemon">Tipo:</h2>
           <p class="subtitle-pokemon type-pokemon">${getTypes()}</p>
           <h2 class="title-pokemon">Descrição:</h2>
